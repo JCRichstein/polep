@@ -19,14 +19,13 @@ import agentspring.role.Role;
 import agentspring.role.RoleComponent;
 
 /**
- * 			<----- BidIntoMarketRole: Kaveri ----->
-
-    			
-    				Pj(t) = qj(t)/(sigma (m from 1 to N) : qm(t))
-    		
-    				Depending upon the selected strategy calculate the Volume for each power plant : Strategy.getPowerPlant.getWitholdment*RealCapacity
-    				Price in bid class: Getting the marginal cost multiplying by (1+Price Markup of producer)
-    				Establish Volume-Price pair
+ * 
+ * Depending upon the selected strategy calculate the Volume for each power plant : Strategy.getPowerPlant.getWitholdment*RealCapacity
+ * Price in bid class: Getting the marginal cost multiplying by (1+Price Markup of producer)
+ * Establish Volume-Price pair
+ * 
+ * Pj(t) = qj(t)/(sigma (m from 1 to N) : qm(t))
+ * 
  * @author Kaveri
  *
  */
