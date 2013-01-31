@@ -8,7 +8,12 @@ import org.springframework.data.neo4j.annotation.RelatedTo;
 @NodeEntity
 public class PowerPlant {
 
-        // @Indexed
+/**
+ * Power generation technologies have proerties name, capacity, efficiency and marginal cost.
+ * There are three main technologies considered coal, OCGT and CCGT.
+ * 
+ **/
+       
 	private String name;
     private String nameTechnology;
     private double capacity;
@@ -35,16 +40,12 @@ public class PowerPlant {
         this.name = name;
     }
 
-	/**
-	 * @return the nameTechnology
-	 */
+
 	public String getNameTechnology() {
 		return nameTechnology;
 	}
 
-	/**
-	 * @param nameTechnology the nameTechnology to set
-	 */
+	
 	public void setNameTechnology(String nameTechnology) {
 		this.nameTechnology = nameTechnology;
 	}
