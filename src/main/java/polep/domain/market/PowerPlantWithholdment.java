@@ -6,6 +6,11 @@ import org.springframework.data.neo4j.annotation.RelatedTo;
 
 import polep.domain.technology.PowerPlant;
 
+/**
+ * The witholdment is the volume of capacity that can be withheld from a certain power plant.
+ * 
+ * */
+
 @NodeEntity
 public class PowerPlantWithholdment {
 
@@ -13,37 +18,21 @@ public class PowerPlantWithholdment {
 	
 	@RelatedTo(type = "STRATEGY_POWERPLANT", elementClass=PowerPlant.class, direction=Direction.OUTGOING)
 	private PowerPlant powerplant;
-
 	
-
-	/**
-	 * @return the withholdment
-	 */
 	public double getWithholdment() {
 		return withholdment;
 	}
-
-	/**
-	 * @param withholdment the withholdment to set
-	 */
+	
 	public void setWithholdment(double witholdment) {
 		this.withholdment = witholdment;
 	}
-
-	/**
-	 * @return the powerplant
-	 */
+	
 	public PowerPlant getPowerplant() {
 		return powerplant;
 	}
 
-	/**
-	 * @param powerplant the powerplant to set
-	 */
 	public void setPowerplant(PowerPlant powerplant) {
 		this.powerplant = powerplant;
 	}
-	
-	
-	
+		
 }
