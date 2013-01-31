@@ -4,6 +4,11 @@ import org.springframework.data.neo4j.annotation.NodeEntity;
 
 import agentspring.simulation.SimulationParameter;
 
+/*
+* Each type of fuel has a property price (Euro/Mwh)
+*
+*/
+
 @NodeEntity
 public class Fuel {
 	
