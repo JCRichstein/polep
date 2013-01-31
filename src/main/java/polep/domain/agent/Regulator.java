@@ -9,18 +9,23 @@ import agentspring.agent.AbstractAgent;
 import agentspring.agent.Agent;
 import agentspring.simulation.SimulationParameter;
 
+/**
+ * @pcbhagwat
+ * 
+ * The regulator has the properties amount of cash, a fine, the probability to check generators, acceptable witholdment and a name.
+ **/
+
 @NodeEntity
 public class Regulator extends AbstractAgent implements Agent {
 
-	//TODO: There are still some properties missing (as compared to mind map).
-
+	
 	@SimulationParameter(label = "Agents Cash Balance", from = 1, to = 100)
 	double cash;
 	@SimulationParameter(label = "Amount of fine", from = 1, to = 100000)
 	double fine;
 	String name;
 
-	// 0.5 will is the value used for unbiased coin
+	
 	@SimulationParameter(label = "Probability to check", from = 0, to = 1)
 	double probabilityToCheck;
 
