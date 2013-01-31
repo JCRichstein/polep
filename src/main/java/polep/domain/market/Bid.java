@@ -7,8 +7,8 @@ import org.springframework.data.neo4j.annotation.RelatedTo;
 import polep.domain.agent.EnergyProducer;
 
 
-/*
- * Establishes a volume-price pair for every power plant owned by an energy producer.
+/* A bid has properties price, volume, status, accepted volume and time.
+ * The role of the bid is to etablish a volume-price pair for every power plant owned by an energy producer.
  * The volume price pair is established based on the bidding strategy returned.  
  */
 
@@ -21,9 +21,6 @@ public class Bid {
 	public static int PARTLY_ACCEPTED = 2;
 	public static int ACCEPTED = 3;
 
-	/* TODO: EnergyProducer doesn't exist, and we have only supply bids by EnergyProducers. 
-	 * We could do it differently though, if you think it makes it easier to implement.
-	 */
 	@RelatedTo(type = "BIDDER", elementClass = EnergyProducer.class, direction = Direction.INCOMING)
 	private EnergyProducer bidder;
 
