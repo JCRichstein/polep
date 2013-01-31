@@ -33,10 +33,7 @@ import agentspring.role.ScriptComponent;
  
 @RoleComponent
 public class UpdatePropensityRole extends AbstractRole<EnergyProducer> implements Role<EnergyProducer> {
-	
-	/* TODO: As a convention it is better not to define variables outside of methods in
-	* role classes. */
-	
+		
 	Set<BiddingStrategy> strategySet;
 		
     @Autowired
