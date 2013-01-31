@@ -15,7 +15,7 @@ import agentspring.role.Role;
 import agentspring.role.RoleComponent;
 
 /**
- * 			<----- BidIntoMarketRole: Kaveri ----->
+ * 			<----- BidIntoMarketRole:  ----->
     		Each EnergyProducer bids into the market by
     			Establishes the (RealVolume, MarginalCost) for each of his Power Plants by
     				RealVolume: Getting the Capacity of the Power Plant

@@ -8,9 +8,10 @@ import org.springframework.transaction.annotation.Transactional;
 import polep.domain.market.EnergyMarket;
 
 /**
- * Spot market clearing point
+ * The clearing point consists of the volume of supply capacity accepted 
+ * and the market clearing price for a given demand at the current tick.
  * 
- * @Prad
+ * @pcbhagwat
  * 
  */
 

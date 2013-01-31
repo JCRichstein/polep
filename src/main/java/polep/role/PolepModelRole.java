@@ -44,9 +44,6 @@ public class PolepModelRole extends AbstractRole<PolepModel> implements Role<Pol
 
     public void act(PolepModel model){
     	
-    	//TODO: We need to make this to real code.
-	
-
 /*    	
     	 In each time step the following script is run
 			
@@ -81,8 +78,7 @@ public class PolepModelRole extends AbstractRole<PolepModel> implements Role<Pol
     		bidIntoMarketRole.act(producer);
     	}
     				
-				
-				
+					
 			/*	<------ ClearMarketRole: Prad ----->
     			The APX clears the market by:
     				Search for bids of the current time step from the graph database

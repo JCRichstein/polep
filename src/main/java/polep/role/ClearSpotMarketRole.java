@@ -15,10 +15,12 @@ import polep.repository.BidRepository;
 import polep.repository.ClearingPointRepository;
 
 /** 
- * clears market
+ * All bids that are submitted in the market are sorted by price. While the sum of all the accepted bid is less than demand bids are marked as accepted.
+ * The price of the last bid is the market clearing price. If the volume of the last bid exceeds the volume that is required, then it is marked as partially accepted.
+ * Remaining bids are rejected. New clearing point is set based of the clearing price and volume.
+ *  
  * @author pbhagwat
  *
- * @param <T>
  */
 @RoleComponent
 public class ClearSpotMarketRole extends AbstractRole<EnergyMarket> implements Role<EnergyMarket> {
@@ -102,14 +104,3 @@ public class ClearSpotMarketRole extends AbstractRole<EnergyMarket> implements R
 	}
 
 }
-
-
-
-/**	
- * Get sorted list of Bid-Volume Pairs in ascending order
- * Get Demand
- * match demand supply and clear market
- * Store price of last bid as clearing price
- */
-
-

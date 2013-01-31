@@ -44,16 +44,6 @@ public class DispatchPowerPlantRole  extends AbstractRole<EnergyProducer> implem
 	@Transactional
 	public void act(EnergyProducer producer){
 		
-		/* TODO: Hey, the clearing via the clearingPrice should work.
-		 * However, after thinking a bit about it, and looking at the
-		 * polep.domain.market.Bid class, I think we already have a 
-		 * solution via the bid status (ACCEPTED, PARTLY_ACCEPTED, etc.)
-		 * and also via the variable acceptedAmount. Just assume for now
-		 * that these are properly dealt with in the MarketClearingRole.
-		 * You could for example assume, that via 
-		 * double totalAmount = bidRespository.calculateTotalAcceptedAmountforEnergyProducerInTimeStep(producer, getCurrentTick())
-		 * you have the total accepted amount, and that you have a marginal cost sorted power plant list: Iterable<PowerPlant> marginalCostSortedPowerPlants.
-		 */
 		
 		Iterable<Bid> allBids = bidRepository.findAllBidsPerProducerForTime(producer, getCurrentTick());
 		// gives sorted list of bids per producer? list to be defined in repository
